@@ -1,44 +1,70 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Student Information Form</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Average Marks Calculator</title>
+
+    <script type="text/javascript">
+        function calculateAverage() {
+
+            var reg = document.getElementById("regno").value;
+            var sub = document.getElementById("subcode").value;
+            var t1 = document.getElementById("test1").value;
+            var t2 = document.getElementById("test2").value;
+            var t3 = document.getElementById("test3").value;
+
+            // Validation
+            if (reg == "" || sub == "" || t1 == "" || t2 == "" || t3 == "") {
+                alert("All fields are required!");
+                return;
+            }
+
+            if (isNaN(t1) || isNaN(t2) || isNaN(t3)) {
+                alert("Marks must be numeric!");
+                return;
+            }
+
+            t1 = parseFloat(t1);
+            t2 = parseFloat(t2);
+            t3 = parseFloat(t3);
+
+            if (t1 < 0 || t1 > 100 ||
+                t2 < 0 || t2 > 100 ||
+                t3 < 0 || t3 > 100) {
+                alert("Marks should be between 0 and 100!");
+                return;
+            }
+
+            // Find average of best two tests
+            var total = t1 + t2 + t3;
+            var lowest = Math.min(t1, t2, t3);
+            var average = (total - lowest) / 2;
+
+            alert("Average of Best Two Tests = " + average);
+        }
+    </script>
 </head>
+
 <body>
+    <h2>Student Marks Form</h2>
 
-<center>
-    <h2>Student Information Form</h2>
+    <form>
+        Register Number:
+        <input type="text" id="regno" /><br /><br />
 
-    <fieldset style="width:350px; margin-top:50px;">
-        
-        Name:
-        <input type="text" id="name"><br><br>
+        Subject Code:
+        <input type="text" id="subcode" /><br /><br />
 
-        Email:
-        <input type="email" id="email"><br><br>
+        Test 1 Marks:
+        <input type="text" id="test1" /><br /><br />
 
-        Mobile:
-        <input type="tel" id="mobile"><br><br>
+        Test 2 Marks:
+        <input type="text" id="test2" /><br /><br />
 
-        Gender:
-        <input type="radio" name="gender" value="Male"> Male
-        <input type="radio" name="gender" value="Female"> Female
-        <br><br>
+        Test 3 Marks:
+        <input type="text" id="test3" /><br /><br />
 
-        Favorite Color:
-        <input type="color" id="color">
-        <br><br>
-
-        <button onclick="validate()">Submit</button>
-        <br><br>
-
-        <textarea id="output" rows="6" cols="40" readonly></textarea>
-
-    </fieldset>
-
-</center>
-
-<script src="script.js"></script>
-
+        <input type="button" value="Calculate Average"
+               onclick="calculateAverage()" />
+    </form>
 </body>
 </html>

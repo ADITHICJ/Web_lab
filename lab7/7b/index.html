@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <title>Student Information Form</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<center>
+    <h2>Student Information Form</h2>
+
+    <fieldset style="width:350px; margin-top:50px;">
+        
+        Name:
+        <input type="text" id="name"><br><br>
+
+        Email:
+        <input type="email" id="email"><br><br>
+
+        Mobile:
+        <input type="tel" id="mobile"><br><br>
+
+        Gender:
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <br><br>
+
+        Favorite Color:
+        <input type="color" id="color">
+        <br><br>
+
+        <button onclick="validate()">Submit</button>
+        <br><br>
+
+        <textarea id="output" rows="6" cols="40" readonly></textarea>
+
+    </fieldset>
+
+</center>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Registration Form</title>
+
+    <script>
+        function validateForm() {
+            var userid = document.getElementById("userid").value;
+            var name = document.getElementById("name").value;
+            var password = document.getElementById("password").value;
+            var email = document.getElementById("email").value;
+
+            // User ID
+            if (userid.length < 5 || userid.length > 12) {
+                alert("User ID must be 5 to 12 characters");
+                return false;
+            }
+
+            // Name
+            var namePattern = /^[A-Za-z ]+$/;
+            if (!namePattern.test(name) || name.length < 15) {
+                alert("Name should contain only alphabets and minimum 15 characters");
+                return false;
+            }
+
+            // Password
+            var passPattern = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%]).{8,}$/;
+            if (!passPattern.test(password)) {
+                alert("Password must have 8 characters, one uppercase, one number and one special character");
+                return false;
+            }
+
+            // Email
+            var emailPattern = /^\S+@\S+\.\S+$/;
+            if (!emailPattern.test(email)) {
+                alert("Invalid Email");
+                return false;
+            }
+
+            alert("Registration Successful");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <h2>Registration Form</h2>
+
+        <form onsubmit="return validateForm()">
+            User ID:
+            <input type="text" id="userid" /><br /><br />
+
+            Name:
+            <input type="text" id="name" /><br /><br />
+
+            Password:
+            <input type="password" id="password" /><br /><br />
+
+            E-mail:
+            <input type="text" id="email" /><br /><br />
+
+            <input type="submit" value="Register" />
+        </form>
+    </center>
+</body>
+</html>
