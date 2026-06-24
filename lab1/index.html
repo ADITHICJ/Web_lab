@@ -1,187 +1,181 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Department Timetable</title>
 
     <style>
-      body {
-        background: url("https://central.sjceplacements.org/campus/admin.jpg");
-        background-size: cover;
-      }
+        body {
+            background: url("https://central.sjceplacements.org/campus/admin.jpg");
+            background-size: cover;
+        }
 
-      table {
-        background: white;
-        margin: auto;
-        border-collapse: collapse;
-      }
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            background: white;
+        }
 
-      h1,
-      h3,
-      td,
-      th {
-        text-align: center;
-      }
+        th,td,h1,h3 {
+            text-align: center;
+        }
 
-      .header {
-        background: #003366;
-        color: white;
-      }
+        .timetable {
+            width: 90%;
+        }
 
-      .nav {
-        background: #003366;
-      }
-
-      .nav a {
-        color: white;
-      }
-
-      th {
-        background: #0b4a8b;
-        color: white;
-      }
-    
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+        }
     </style>
-  </head>
-  <body>
-    <table width="100%" class="header">
-      <tr>
-        <td>
-          <h1>UNIVERSITY OF TECHNOLOGY</h1>
-          <h3>Department of Computer Science</h3>
-          Academic Year 2023-2024
-        </td>
-      </tr>
+</head>
+
+<body>
+
+    <table width="100%">
+        <tr>
+            <td>
+                <h1>UNIVERSITY OF TECHNOLOGY</h1>
+                <h3>Department of Computer Science</h3>
+                Academic Year 2023-2024
+            </td>
+        </tr>
     </table>
 
-    <br />
+    <br>
 
-    <table width="100%" class="nav">
-      <tr>
-        <td>
-          <a href="#timetable">Timetable</a> | <a href="#courses">Courses</a> |
-          <a href="#faculty">Faculty</a>
-        </td>
-      </tr>
-    </table>
-    <h3 id="timetable">Class Timetable</h3>
-
-    <table border="1" width="90%" cellpadding="10">
-      <tr bgcolor="#cccccc">
-        <th>Time/Day</th>
-        <th>Monday</th>
-        <th>Tuesday</th>
-        <th>Wednesday</th>
-        <th>Thursday</th>
-        <th>Friday</th>
-      </tr>
-
-      <tr>
-        <td>9:00 - 10:00</td>
-        <td>CS101<br />Dr. Smith</td>
-        <td>MATH201<br />Dr. Johnson</td>
-        <td>CS101<br />Dr. Smith</td>
-        <td>MATH201<br />Dr. Johnson</td>
-        <td>-</td>
-      </tr>
-
-      <tr>
-        <td>10:00 - 11:00</td>
-        <td>CS205<br />Prof. Brown</td>
-        <td>PHY101<br />Dr. Wilson</td>
-        <td>CS205<br />Prof. Brown</td>
-        <td>PHY101<br />Dr. Wilson</td>
-        <td>-</td>
-      </tr>
-
-      <tr bgcolor="#fdd">
-        <td>11:00 - 12:00</td>
-        <td colspan="5">Lab Sessions</td>
-      </tr>
-
-      <tr bgcolor="#dfd">
-        <td>12:00 - 1:00</td>
-        <td colspan="5">Lunch Break</td>
-      </tr>
+    <table width="100%">
+        <tr>
+            <td>
+                <a href="#timetable">Timetable</a> |
+                <a href="#courses">Courses</a> |
+                <a href="#faculty">Faculty</a>
+            </td>
+        </tr>
     </table>
 
-    <h3 id="courses">Course Information</h3>
+    <h3>Class Timetable</h3>
 
-    <table border="1" width="80%" cellpadding="8">
-      <tr bgcolor="#cccccc">
-        <th>Course Code</th>
-        <th>Course Title</th>
-        <th>Credits</th>
-      </tr>
+    <table class="timetable">
+        <tr>
+            <th>Time/Day</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+        </tr>
 
-      <tr>
-        <td>CS101</td>
-        <td>Introduction to Programming</td>
-        <td>3</td>
-      </tr>
+        <tr>
+            <td>9:00 - 10:00</td>
+            <td>CS101<br>Dr. Smith</td>
+            <td>MATH201<br>Dr. Johnson</td>
+            <td>CS101<br>Dr. Smith</td>
+            <td>MATH201<br>Dr. Johnson</td>
+            <td>-</td>
+        </tr>
 
-      <tr>
-        <td>MATH201</td>
-        <td>Calculus I</td>
-        <td>4</td>
-      </tr>
+        <tr>
+            <td>10:00 - 11:00</td>
+            <td>CS205<br>Prof. Brown</td>
+            <td>PHY101<br>Dr. Wilson</td>
+            <td>CS205<br>Prof. Brown</td>
+            <td>PHY101<br>Dr. Wilson</td>
+            <td>-</td>
+        </tr>
 
-      <tr>
-        <td>CS205</td>
-        <td>Data Structures and Algorithms</td>
-        <td>3</td>
-      </tr>
+        <tr>
+            <td>11:00 - 12:00</td>
+            <td colspan="5">Lab Sessions</td>
+        </tr>
 
-      <tr>
-        <td>PHY101</td>
-        <td>Physics for Computer Science</td>
-        <td>4</td>
-      </tr>
+        <tr>
+            <td>12:00 - 1:00</td>
+            <td colspan="5">Lunch Break</td>
+        </tr>
     </table>
 
-    <h3 id="faculty">Faculty Information</h3>
+    <h3>Course Information</h3>
 
-    <table border="1" width="80%" cellpadding="8">
-      <tr bgcolor="#cccccc">
-        <th>Name</th>
-        <th>Department</th>
-        <th>Office</th>
-      </tr>
+    <table class="timetable">
+        <tr>
+            <th>Course Code</th>
+            <th>Course Title</th>
+            <th>Credits</th>
+        </tr>
 
-      <tr>
-        <td>Dr. Smith (DS)</td>
-        <td>Computer Science</td>
-        <td>Room 301</td>
-      </tr>
+        <tr>
+            <td>CS101</td>
+            <td>Introduction to Programming</td>
+            <td>3</td>
+        </tr>
 
-      <tr>
-        <td>Dr. Johnson (JJ)</td>
-        <td>Mathematics</td>
-        <td>Room 205</td>
-      </tr>
+        <tr>
+            <td>MATH201</td>
+            <td>Calculus I</td>
+            <td>4</td>
+        </tr>
 
-      <tr>
-        <td>Prof. Brown (BB)</td>
-        <td>Computer Science</td>
-        <td>Room 302</td>
-      </tr>
+        <tr>
+            <td>CS205</td>
+            <td>Data Structures and Algorithms</td>
+            <td>3</td>
+        </tr>
 
-      <tr>
-        <td>Dr. Wilson (WW)</td>
-        <td>Physics</td>
-        <td>Room 401</td>
-      </tr>
+        <tr>
+            <td>PHY101</td>
+            <td>Physics for Computer Science</td>
+            <td>4</td>
+        </tr>
     </table>
 
-    <br />
+    <h3>Faculty Information</h3>
 
-    <table width="100%" class="header">
-      <tr>
-        <td>
-          University of Technology<br />
-          Department of Computer Science<br />
-          Contact: +1 (555) 123-4567 | Email: cs.department@university.edu
-        </td>
-      </tr>
+    <table class="timetable">
+        <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Office</th>
+        </tr>
+
+        <tr>
+            <td>Dr. Smith (DS)</td>
+            <td>Computer Science</td>
+            <td>Room 301</td>
+        </tr>
+
+        <tr>
+            <td>Dr. Johnson (JJ)</td>
+            <td>Mathematics</td>
+            <td>Room 205</td>
+        </tr>
+
+        <tr>
+            <td>Prof. Brown (BB)</td>
+            <td>Computer Science</td>
+            <td>Room 302</td>
+        </tr>
+
+        <tr>
+            <td>Dr. Wilson (WW)</td>
+            <td>Physics</td>
+            <td>Room 401</td>
+        </tr>
     </table>
-  </body>
+
+    <br>
+
+    <table class="timetable">
+        <tr>
+            <td>
+                University of Technology<br>
+                Department of Computer Science<br>
+                Contact: +1 (555) 123-4567 |
+                Email: cs.department@university.edu
+            </td>
+        </tr>
+    </table>
+
+</body>
 </html>

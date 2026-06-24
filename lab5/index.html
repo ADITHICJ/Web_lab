@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CSS Demonstration</title>
+
+    <style>
+      /* Different Font Styles */
+      .font1 {
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      .font2 {
+        font-family: "Times New Roman";
+        font-style: italic;
+        font-size: 20px;
+      }
+
+      .font3 {
+        font-family: Courier New;
+        text-decoration: underline;
+        font-size: 20px;
+      }
+
+      /* Background Repeat */
+      .bg {
+        width: 400px;
+        height: 150px;
+        border: 1px solid black;
+        background-image: url("https://picsum.photos/50");
+        margin-bottom: 20px;
+      }
+
+      .bg-repeat {
+        background-repeat: repeat;
+      }
+
+      .bg-no-repeat {
+        background-repeat: no-repeat;
+      }
+
+      /* Link Styles */
+      a:link {
+        color: blue;
+      }
+
+      a:visited {
+        color: purple;
+      }
+
+      a:hover {
+        color: red;
+      }
+
+      a:active {
+        color: green;
+      }
+
+      /* Visibility Property */
+      .visible-box {
+        background-color: lightgreen;
+      }
+
+      .hidden-box {
+        background-color: lightcoral;
+        visibility: hidden;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>CSS Demonstration</h1>
+
+    <h2>1. Different Font Styles</h2>
+    <p class="font1">This text is bold using Arial font.</p>
+    <p class="font2">This text is italic using Times New Roman font.</p>
+    <p class="font3">This text is underlined using Courier New font.</p>
+
+    <h2>2. Background Repeat Property</h2>
+    <div class="bg bg-repeat">Image repeats in this box.</div>
+
+    <div class="bg bg-no-repeat">Image does not repeat in this box.</div>
+
+    <h2>3. Link Styles</h2>
+    <a href="https://www.google.com"> Visit Google </a>
+
+    <h2>4. Visibility Property</h2>
+    <div class="visible-box">This box is visible.</div>
+
+    <div class="hidden-box">This box is hidden using visibility: hidden.</div>
+
+    <p>The hidden box occupies space but is not visible.</p>
+  </body>
+</html>
