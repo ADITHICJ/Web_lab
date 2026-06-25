@@ -10,14 +10,16 @@ function validate() {
         return;
     }
 
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)) {
-        alert("Invalid Email");
-        return;
-    }
+    var emailPattern = /^\S+@\S+\.\S+$/;
+    if (!emailPattern.test(e)) {
+         alert("Invalid Email");
+         return;
+     }
 
-    if (!/^\d{10}$/.test(m)) {
-        alert("Invalid Mobile");
-        return;
+    var mobilePattern = /^\d{10}$/;
+    if (!mobilePattern.test(m)) {
+         alert("Invalid Mobile");
+         return;
     }
 
     if (!g) {
