@@ -1,33 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <title>Feedback Form</title>
-</head>
-<body>
-<h2>Student Feedback Form</h2>
-<form>
-    Name: <input type="text" required><br><br>
-    USN: <input type="text"><br><br>
-    Gender:
-    <input type="radio" name="g"> Male
-    <input type="radio" name="g"> Female
-    <br><br>
-    Course:
-    <input type="checkbox"> AI/ML
-    <input type="checkbox"> IoT
-    <br><br>
-    Rating:
-    <select>
-        <option>Excellent</option>
-        <option>Good</option>
-        <option>Average</option>
-    </select>
-    <br><br>
-    Comments:<br>
-    <textarea rows="3" cols="30"></textarea>
-    <br><br>
-    <input type="submit" value="Submit">
-    <input type="reset" value="Reset">
-</form>
-</body>
+  <head>
+    <title>Student Feedback Form</title>
+  </head>
+
+  <body>
+    <center>
+      <h2>Student Feedback Form</h2>
+
+      <form>
+        <fieldset style="width: 350px; margin-top: 50px">
+          Name:
+          <input type="text" />
+          <br /><br />
+
+          USN:
+          <input type="text" />
+          <br /><br />
+
+          Gender:
+          <input type="radio" name="gender" /> Male
+          <input type="radio" name="gender" /> Female
+          <br /><br />
+
+          Semester:
+          <select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+          </select>
+          <br /><br />
+
+          <b>Facilities you liked:</b>
+          <br /><br />
+
+          <input type="checkbox" /> Library <br />
+          <input type="checkbox" /> Computer Lab <br />
+          <input type="checkbox" /> Canteen <br />
+          <input type="checkbox" /> Sports <br /><br />
+
+          Feedback:
+          <br />
+          <textarea rows="5" cols="40"></textarea>
+          <br /><br />
+
+          <input type="submit" value="Submit" />
+          <input type="reset" value="Reset" />
+        </fieldset>
+      </form>
+    </center>
+  </body>
 </html>
